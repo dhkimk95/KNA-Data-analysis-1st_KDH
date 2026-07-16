@@ -27,3 +27,8 @@ print(word[::-1])
 
 num = "01085483772"
 print(len(num))
+
+# ================================
+# 실습 7
+text = "a,b,c,d"
+print(text.count(","))
