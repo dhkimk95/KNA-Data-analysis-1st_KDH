@@ -17,3 +17,39 @@ print((x + y + z) / 3)
 side = 7
 print(side**2)
 print(3 * 4 * 5)
+
+# 비교 연산자 6종을 활용하여 임의의 값으로 비교하고 결과(True/False)를 출력
+print(9 == 9)
+print(9 != 9)
+print(9 > 9)
+print(9 < 9)
+print(9 >= 9)
+print(9 <= 9)
+
+temp = 85
+temp_ok = 60 <= temp and temp <= 90
+print(temp_ok)
+pressure = 5
+press_ok = 3 <= pressure and pressure <= 7
+print(press_ok)
+print(temp_ok and press_ok)
+
+stock = 100
+print(stock)
+stock += 50
+print(stock)
+stock -= 30
+print(stock)
+stock += 5
+print(stock)
+
+total = 500
+defect = 23
+print(defect / total * 100)
+run_h = 21
+toth = 24
+print(run_h / toth * 100)
+
+miniute = 500
+print(miniute // 60)
+print(miniute % 60)
