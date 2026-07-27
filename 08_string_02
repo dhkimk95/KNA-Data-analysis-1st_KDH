@@ -1,0 +1,125 @@
+# endswith와 len의 차이는?
+# endswith
+
+
+"srt".startswith("s")
+# 123.startswith(1)
+# .으로 사용하는 메서드들은 특정 자료형 마다 다름
+# int 자료형의 객체에는 startswith라는 메서드가 없음
+
+print(len("123"))  # len 내장함수는 길이를 반환하기 떄문에 int 자료형 사용 불가
+
+# =============
+# 재할당 복습
+
+num = 1
+num = num + 1
+num += 1
+# += 은 복합할당연산자 원래 내 자신의 값에 다음 오는 연산자와 값을 적용해서 재할당
+
+
+word = "python"
+print(word.upper())  # PYTHON
+print(word.count("p"))  # 1
+print(word.startswith("p"))  # True
+
+# =============
+print("=== .upper() ===")
+
+str3 = "abcdefg"
+print(str3)
+
+str3.upper()
+print(str3)
+
+# 앞으로 계속 대문자로 변환한 값을 사용하고 싶으면
+# 변수에 재할당
+# 변수 재할당에서 변수 스스로를 부르는 것이 가능
+# 재할당에서 변수 스스로 값을 부르려면 무조건 "재할당" 이어야함
+str3 = str3.upper()
+print(str3)
+
+s = "ready"
+big = s.upper()
+print(big)  # READY
+
+s = "WARNING"
+small = s.lower()
+print(small)  # warning
+
+# capitalize - 문장 첫 글자만 ('python is'-'Python is')
+# itle - 단어마다 첫 글자 ('hong gil'-'Hong Gil')
+# 이름·제목 정리에 가끔 사용
+name = "kim chul soo"
+print(name.title())  # Kim Chul Soo
+
+# ' 사용시에 대문자로 뽑힘
+print("i'm full".title())
+print("i'm full".title())
+
+print("ABC".isupper())  # True
+print("abc".islower())  # True
+print("Abc".isupper())  # False
+
+a = "Fault"
+b = "FAULT"
+print(a == b)  # False (대소문자 달라 다른 값)
+print(a.lower() == b.lower())  # True (소문자로 통일 후 비교)
+
+
+fname = "Sensor_LOG.CSV"
+low = fname.lower()
+print(low.startswith("sensor"))  # True
+print(low.endswith(".csv"))  # True
+print(fname.endswith(".csv"))  # False (대문자 .CSV라 통일 전엔 False)
+
+text = " 정상 "
+print("[" + text + "]")  # [ 정상 ]
+text = text.strip()
+print("[" + text + "]")  # [정상]
+
+# ====================
+print("=== .strip( ====)")
+
+# 공백 제거
+# .strip(): 앞과 뒤의 모든 공백제거 (중간 띄어쓰기는 그대로 유지)
+# .lstrip(): left 공백만 제거
+# .rstrip(): right 공백만 제거
+
+raw = "     정상         "
+print(raw.strip())
+print(raw.lstrip())
+print(raw.rstrip())
+
+print("  정    상      ".strip())
+print(raw)
+# strip은 재활당이나 새 변수에 할당하지 않는 이상 휘발된다.
+
+str = " Warning "
+
+s = str.strip()
+print("[" + s + "]")
+
+s = s.strip().lower()
+print("[" + s + "]")
+
+
+# strip 메서드에 인자로 들어가는 문자열은 완전히 동일하지 않아도 삭제가 됩니다.
+
+
+parts = ["2025", "01", "15"]
+print("-".join(parts))
+
+
+word = "python"
+
+print(word[:2] + word.strip("py").capitalize())
+
+raw = "2026/07/27"
+parts = raw.split("/")
+print("-".join(parts))
+
+raw = "1, NORMAL ,25.3"
+parts = raw.split(",")
+nom = parts[1].strip().lower()
+print(nom)
