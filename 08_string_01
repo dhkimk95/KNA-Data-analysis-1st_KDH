@@ -178,11 +178,11 @@ print("======== find()=========")
 # 전달빋은 글자가 "첫 번쨰"로 나오는 위치 인덱스 반환
 # 찾는 글자가 없다면 -1을 반환
 
-email = kev67703772 @ gmail.com
+# email = kev67703772 @ gmail.com
 # at = email.find(@) # @ 위치의 인덱스가 할당
-user_id = email[:at]
-print(at)
-print(email[:at])
+# user_id = email[:at]
+# print(at)
+# print(email[:at])
 
 # ==================================
 print("==== index() ====")
@@ -240,9 +240,9 @@ print("==== startswith() ====")
 # True/False (불리언)
 
 # EQP로 시작하는지 검사하기
-print("EQP-001".startswith(eqp))
+# print("EQP-001".startswith(eqp))
 
-변수활용
+# 변수활용
 eqp = "EQP"
 print("EQP-001".startswith(eqp))
 
