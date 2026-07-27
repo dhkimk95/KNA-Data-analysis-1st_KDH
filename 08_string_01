@@ -175,11 +175,86 @@ print("layla@spreatics".count("@"))
 
 # ===================================
 print("======== find()=========")
-#전달빋은 글자가 "첫 번쨰"로 나오는 위치 인덱스 반환
+# 전달빋은 글자가 "첫 번쨰"로 나오는 위치 인덱스 반환
 # 찾는 글자가 없다면 -1을 반환
 
-email = kev67703772@gmail.com
-at = email.find(@) # @ 위치의 인덱스가 할당
+email = kev67703772 @ gmail.com
+# at = email.find(@) # @ 위치의 인덱스가 할당
 user_id = email[:at]
 print(at)
 print(email[:at])
+
+# ==================================
+print("==== index() ====")
+
+# 특정 문자열의 위치(인덱스 번호)를 반환
+# 앞에서부터 가장 처음 나오는 인덱스 번호만 반환
+# 찾는 문자열이 없으면 Error 발생
+
+email = "layla@spreatics.com"
+at = email.index("@")
+print(email[0:at])
+print(email[0:at])  # 시작 번호가 0이라면 start 생략 가능
+print(email[at:])  # 끝까지 출력하고 싶고, 뒤에 몇 글자가 있는지 모르니 생략
+print(
+    email[at + 1 :]
+)  # 위처럼 시작하면 5번 인덱스 부터 출력하기 떄문에 @을 포함, 따라서 at +1을하면 at을 포함하지 않고 출력함
+
+
+# ==================================
+print("==== count() ====")
+
+# 문자열에서 특정 문자열의 갯수 세기
+
+str = "a, b, c, d, e,a, a"
+# a의 갯수 세기
+print(str.count("a"))
+# ,의 갯수 세기
+print(str.count(","))
+
+print(str.count(", "))  # count로 찾는 문자열과 완전히 동일해야 갯수를 셈
+
+
+# SQE-00Q8이라는 설비의 SQE만 뽑아내기 (find와 슬라이싱 사용)
+sqe = "SQE-00Q8"
+
+sqe_index = sqe.find("SQE")
+print(sqe_index)
+
+sqe_index = sqe.find("_")
+print(sqe_index)
+sqe_fin = sqe[:sqe_index]
+print(sqe_fin)
+
+# find에서 했던 SQE 뽑아내기 실습 index 사용으로 바꿈
+sqe = "SQE-00Q8"
+sqe_index = sqe.index("-")
+print(sqe_index)
+sqe_fin = sqe[:sqe_index]
+print(sqe_fin)
+
+# ==================================
+print("==== startswith() ====")
+
+# 특정 문자열로 시작하는지 검사
+# True/False (불리언)
+
+# EQP로 시작하는지 검사하기
+print("EQP-001".startswith(eqp))
+
+변수활용
+eqp = "EQP"
+print("EQP-001".startswith(eqp))
+
+# ==================================
+print("==== endswich() ====")
+# 특정 문자열로 끝나는지 확인
+# True / False로 반환
+
+str2 = "월요일입니다 여러분은 할 수 있어요!"
+
+# r2.(str2.endswith("!"))
+# r2.(str2.endswith("요"))
+# r2.(str2.endswith("음!"))
+# r2.(str2.endswith("여러분은 할 수 있어요"))
+# 2.(str2.endswith(" 월요일입니다!"))
