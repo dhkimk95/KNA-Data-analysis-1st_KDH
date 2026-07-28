@@ -123,3 +123,9 @@ raw = "1, NORMAL ,25.3"
 parts = raw.split(",")
 nom = parts[1].strip().lower()
 print(nom)
+
+name = "PUMP_A"
+temp = 87
+print(f"설비 {name}, 온도 {temp}도")
+
+
